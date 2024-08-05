@@ -13,7 +13,7 @@ class _SplashscreenState extends State<Splashscreen> {
     // TODO: implement initState
     super.initState();
     Future.delayed(Duration(seconds: 2), () {
-      Navigator.pushNamed(context, "/home");
+      Navigator.pushReplacementNamed(context, "/home");
     });
   }
 

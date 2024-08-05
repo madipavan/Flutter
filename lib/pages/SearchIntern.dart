@@ -55,15 +55,20 @@ class _SearchInternState extends State<SearchIntern> {
             //custom Appbar
             //internships
             Expanded(
-              child: ListView.builder(
-                itemCount: Internshipslistids.length,
-                itemBuilder: (context, index) {
-                  return InternsCard(
-                      Internshipslist: Internshipslist,
-                      Internshipslistids: Internshipslistids,
-                      index: index);
-                },
-              ),
+              child: Internshipslistids.isEmpty
+                  ? Text(
+                      "Loading",
+                      style: TextStyle(color: Colors.grey),
+                    )
+                  : ListView.builder(
+                      itemCount: Internshipslistids.length,
+                      itemBuilder: (context, index) {
+                        return InternsCard(
+                            Internshipslist: Internshipslist,
+                            Internshipslistids: Internshipslistids,
+                            index: index);
+                      },
+                    ),
             )
             //internships
           ],

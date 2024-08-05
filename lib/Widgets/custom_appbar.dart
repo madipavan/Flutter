@@ -16,13 +16,14 @@ class CustomAppbar extends StatefulWidget {
       this.searchicon = true,
       required this.internslist,
       this.internslistids});
-  static Map<String, dynamic> searchlist = {};
+  static List<dynamic> searchlist = [];
   @override
   State<CustomAppbar> createState() => _CustomAppbarState();
 }
 
 bool searchfield = false;
 TextEditingController controller = TextEditingController();
+List<dynamic> searchlist = [];
 
 class _CustomAppbarState extends State<CustomAppbar> {
   @override
