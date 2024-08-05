@@ -16,7 +16,7 @@ class SearchfeildWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //height and width of device
-    final Height = MediaQuery.of(context).size.height;
+
     final Width = MediaQuery.of(context).size.width;
     //height and width of device
 
@@ -31,7 +31,7 @@ class SearchfeildWidget extends StatelessWidget {
                 size: Width * 0.06,
               )),
           SizedBox(
-              width: Width * 0.8,
+              width: Width * 0.75,
               child: TextField(
                 onChanged: onchanged,
                 controller: controller,

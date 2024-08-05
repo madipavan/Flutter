@@ -20,7 +20,7 @@ class AddFilter extends StatefulWidget {
 List<Map<String, dynamic>> filterscreenlist = [];
 List<Map<String, dynamic>> cityscreenlist = [];
 List<dynamic> Finalfilters = [];
-String maximumduration = "";
+String maximumduration = "1";
 
 class _AddFilterState extends State<AddFilter> {
   @override
@@ -33,6 +33,8 @@ class _AddFilterState extends State<AddFilter> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        surfaceTintColor: Colors.white,
+        backgroundColor: Colors.white,
         title: Text(
           "Filters",
           style: TextStyle(
@@ -197,7 +199,7 @@ class _AddFilterState extends State<AddFilter> {
             ),
             GreytextHeading(text: "MAXIMUM DURATION (IN MONTHS)"),
             SizedBox(
-              height: Height * 0.015,
+              height: Height * 0.025,
             ),
             DropdownWidget(
               dropdownval: maximumduration,

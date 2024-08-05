@@ -1,27 +1,27 @@
 class Citylist {
   static final List<Map<String, dynamic>> citylist = [
     {
-      "filter": "Flutter",
+      "filter": "Mumbai",
       "checked": false,
     },
     {
-      "filter": "1",
+      "filter": "Delhi",
       "checked": false,
     },
     {
-      "filter": "2",
+      "filter": "Gurgaon",
       "checked": false,
     },
     {
-      "filter": "3",
+      "filter": "Banglore",
       "checked": false,
     },
     {
-      "filter": "4",
+      "filter": "Kolkata",
       "checked": false,
     },
     {
-      "filter": "5",
+      "filter": "Ahmedabad",
       "checked": false,
     },
   ];

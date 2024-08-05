@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
 import 'package:internshala/Apis/internships.dart';
 import 'package:internshala/Widgets/interns_card.dart';
 import 'package:internshala/Widgets/custom_appbar.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 class SearchIntern extends StatefulWidget {
   const SearchIntern({super.key});
@@ -26,7 +26,12 @@ class _SearchInternState extends State<SearchIntern> {
   }
 
   _getlist() async {
-    Internshipslistids = await _getinterns();
+    try {
+      Internshipslistids = await _getinterns(context);
+    } catch (e) {
+      print(e);
+    }
+
     setState(() {
       Internshipslistids = Internshipslistids;
     });
@@ -68,8 +73,9 @@ class _SearchInternState extends State<SearchIntern> {
   }
 }
 
-Future _getinterns() async {
+Future _getinterns(context) async {
   var ob = Internships();
+
   final Rawdata = await ob.getdata();
   final data = await json.decode(Rawdata);
   final interns = data["internships_meta"];
@@ -79,4 +85,17 @@ Future _getinterns() async {
   print(Internshipslistids.length);
   // print(interns[internsids[5].toString()]["title"]);
   return internsids;
+}
+
+_showloader(context) {
+  showDialog(
+      context: context,
+      builder: (context) {
+        return Center(
+            child: LoadingAnimationWidget.discreteCircle(
+                color: Colors.red,
+                size: 50,
+                secondRingColor: Colors.white,
+                thirdRingColor: Colors.blueAccent));
+      });
 }

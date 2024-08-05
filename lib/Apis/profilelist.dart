@@ -5,23 +5,23 @@ class Profilelist {
       "checked": false,
     },
     {
-      "filter": "1",
+      "filter": ".Net Development",
       "checked": false,
     },
     {
-      "filter": "2",
+      "filter": "3D printing",
       "checked": false,
     },
     {
-      "filter": "3",
+      "filter": "Accounts",
       "checked": false,
     },
     {
-      "filter": "4",
+      "filter": "Acting",
       "checked": false,
     },
     {
-      "filter": "5",
+      "filter": "Analytic",
       "checked": false,
     },
   ];

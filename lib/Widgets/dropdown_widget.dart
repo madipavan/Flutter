@@ -3,10 +3,6 @@ import 'package:internshala/Colors/Colors_used.dart';
 
 List<DropdownMenuItem<String>> items = [
   DropdownMenuItem(
-    child: Text(""),
-    value: "",
-  ),
-  DropdownMenuItem(
     child: Text("1"),
     value: "1",
   ),
@@ -48,6 +44,7 @@ class DropdownWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DropdownButtonFormField(
+      dropdownColor: Colors.white,
       value: dropdownval,
       decoration: InputDecoration(
         filled: true,

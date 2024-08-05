@@ -67,18 +67,23 @@ class _AddCityState extends State<AddCity> {
         });
       },
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
+          leadingWidth: Width * 0.08,
+          backgroundColor: Colors.white,
+          surfaceTintColor: Colors.white,
           title: Text(
-            "Profile",
-            style: TextStyle(fontWeight: FontWeight.bold),
+            "City",
+            style:
+                TextStyle(fontWeight: FontWeight.bold, fontSize: Width * 0.05),
           ),
           actions: <Widget>[
             CustomButton(
               text: "Clear all",
               height: Height * 0.04,
-              width: Width * 0.24,
+              width: Width * 0.27,
               textcolor: ColorsUsed.blue,
-              textsize: Width * 0.035,
+              textsize: Width * 0.03,
               onpressed: () {
                 setState(() {
                   selectedfilter = [];
@@ -94,7 +99,7 @@ class _AddCityState extends State<AddCity> {
             CustomButton(
               text: "Apply",
               height: Height * 0.04,
-              width: Width * 0.2,
+              width: Width * 0.25,
               buttonbg: ColorsUsed.blue,
               textcolor: Colors.white,
               textsize: Width * 0.035,

@@ -20,10 +20,8 @@ class _SplashscreenState extends State<Splashscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Image.network(
-            "https://techstory.in/wp-content/uploads/2018/12/Indias-best-startup-internships-internshala.png"),
-      ),
+      backgroundColor: Colors.white,
+      body: Center(child: Image.asset("images/1.png")),
     );
   }
 }
