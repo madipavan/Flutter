@@ -1,0 +1,66 @@
+appBar: AppBar(
+        
+        leading: Icon(Icons.menu_sharp),
+        title: Text("Internships"),
+        actions: <Widget>[
+          Icon(Icons.search_rounded),
+          Icon(Icons.bookmark_border),
+          Icon(Icons.notifications_none),
+          Icon(Icons.messenger_outline_rounded),
+        ],
+        
+      ),
+
+      Container(
+              height: Height * 0.025,
+              width: Width * 0.2,
+              decoration: BoxDecoration(
+                  color: Colors.grey.shade300,
+                  borderRadius: BorderRadius.circular(5)),
+              child: Center(
+                child: Text(
+                  "Internship",
+                  style: TextStyle(
+                      fontSize: Width * 0.035, color: Colors.grey.shade900),
+                ),
+              ),
+            ),
+
+
+            ListView.builder(
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                padding: EdgeInsets.only(right: Width * 0.01),
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  return SelectedFilterChip(
+                    label: "Net Development",
+                  );
+                },
+                itemCount: 10,
+              ),
+
+Container(
+              height: Height * 0.03,
+              width: Width * 0.065,
+              decoration: boxdecoration,
+              child: Visibility(
+                  visible: _ischecked,
+                  child: Icon(
+                    Icons.check,
+                    size: Width * 0.05,
+                    color: Colors.white,
+                  )),
+            ),
+
+              Transform.scale(
+              scale: Width * 0.0025,
+              child: Checkbox(
+                  activeColor: ColorsUsed.blue,
+                  value: _ischecked,
+                  onChanged: (bool? val) {
+                    setState(() {
+                      print(_ischecked);
+                    });
+                  }),
+            ),
